@@ -1,7 +1,7 @@
 package InterviewEasyQues;
-
-import java.util.Arrays;
 import java.util.Scanner;
+
+//Remove Duplicates in same sorted array and return the length of unique elements.
 
 public class DulicateRemoval {
     public int removeDuplicates(int[] nums){
