@@ -44,7 +44,7 @@ public class DulicateRemoval {
         for (int i=0; i<(input.length)-1; i++ ){
             if (input[i] > input[i+1]){
                 System.exit(1);
-                //System.out.println("array is not in non-decreasing order"+input[i]+">"+input[i+1]);
+                //System.out.println("array is in decreasing order"+input[i]+">"+input[i+1]);
             }
 
         }

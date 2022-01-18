@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+//First two elements in array whose sum is equal to target
 public class ExactSumIntArray {
 
     Map<Integer,Integer> map = new HashMap<>();
