@@ -20,7 +20,6 @@ public class RemoveMiddleElm {
 
 
         int temp = stack.pop();
-        //stack.pop();
         index--;
         middleElement(stack,index);
         stack.push(temp);

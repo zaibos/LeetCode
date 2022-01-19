@@ -11,26 +11,18 @@ public class SortArray {
     public void sort(List<Integer> arr){
 
         if (arr.size() == 1){
-            //System.out.println("***size**"+arr.size());
-            //System.out.println("arr final"+arr.toString());
-            //System.out.println("temp1"+temp1);
             return;
         }
 
         int size = arr.size();
-        //System.out.println("size"+size);
 
         int temp1 = arr.get(size - 1);
-        //System.out.println("temp1 inside"+temp1);
         arr.remove(size - 1);
-        //System.out.println("***testing***"+arr.toString());
         sort(arr);
         insert(arr,temp1);
-        //System.out.println("***testing2*****"+arr.toString());
     }
 
     private void insert(List<Integer> arr, int temp) {
-        //System.out.println("***inside insert-1"+arr.toString()+"temp"+temp);
         int size = arr.size();
         if (size == 0 || arr.get(size - 1) <= temp){
             arr.add(temp);
@@ -41,7 +33,6 @@ public class SortArray {
         arr.remove(size - 1);
         insert(arr, temp);
         arr.add(temp2);
-        //System.out.println("***inside insert"+arr.toString());
 
     }
 

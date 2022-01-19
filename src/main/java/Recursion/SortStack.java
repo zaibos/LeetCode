@@ -7,19 +7,13 @@ public class SortStack {
 
     public void sort(Stack<Integer> stack){
         if (stack.size() == 1){
-            //System.out.println("***size**"+stack.size());
             return;
         }
 
-        //int size = stack.size();
-
         int temp1 = stack.peek();
         stack.pop();
-        //System.out.println(temp1);
-        //System.out.println("***testing***"+stack.toString());
         sort(stack);
         insert(stack,temp1);
-        //System.out.println(stack.toString());
     }
 
     public void insert(Stack<Integer> stc, int temp){
