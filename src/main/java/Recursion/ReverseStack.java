@@ -3,30 +3,27 @@ package Recursion;
 import java.util.Scanner;
 import java.util.Stack;
 
-//top to bottom decreasing
-public class SortStack {
+public class ReverseStack {
 
-    public void sort(Stack<Integer> stack){
+    public void reverse(Stack<Integer> stack){
         if (stack.size() == 1){
             return;
         }
 
-        int temp1 = stack.peek();
-        stack.pop();
-        sort(stack);
-        insert(stack,temp1);
+        int temp1 = stack.pop();
+        reverse(stack);
+        insertLast(stack,temp1);
     }
 
-    public void insert(Stack<Integer> stc, int temp){
+    public void insertLast(Stack<Integer> stc, int temp){
         int size = stc.size();
-        if (size == 0 || stc.peek() <= temp){
+        if (size == 0){
             stc.add(temp);
             return;
         }
 
-        int temp2 = stc.peek();
-        stc.pop();
-        insert(stc, temp);
+        int temp2 = stc.pop();
+        insertLast(stc, temp);
         stc.push(temp2);
     }
 
@@ -39,10 +36,9 @@ public class SortStack {
             int in = scanner.nextInt();
             stk.push(in);
         }
-        SortStack sortStack = new SortStack();
+        ReverseStack sortStack = new ReverseStack();
         System.out.println("Input Stack = "+stk.toString());
-        sortStack.sort(stk);
+        sortStack.reverse(stk);
         System.out.println("Output Stack = "+stk.toString());
-
     }
 }
