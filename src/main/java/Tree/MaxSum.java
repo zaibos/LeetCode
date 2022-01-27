@@ -1,5 +1,5 @@
 package Tree;
-
+//any node to any node
 public class MaxSum {
     Node root;
     int res=0;
@@ -9,6 +9,21 @@ public class MaxSum {
             return a;
         }else
             return b;
+    }
+
+    private int maxLeafToLeaf(Node root){
+        if(root == null){
+            return 0;
+        }
+
+        int left = maxSum(root.left);
+        int right = maxSum(root.right);
+
+        int temp = max(left,right) + root.data;
+        int ans = max(temp, root.data+left+right);
+        res = max(res,ans);
+
+        return temp;
     }
 
     private int maxSum(Node root){
@@ -38,8 +53,8 @@ public class MaxSum {
         bin.root.right = new Node(6);
         bin.root.right.left = new Node(7);
         bin.root.right.left.left = new Node(8);
-        bin.root.right.left.left.left = new Node(9);
-        bin.root.right.left.left.left.left = new Node(10);
+        bin.root.right.left.left.left = new Node(-9);
+        bin.root.right.left.left.left.left = new Node(-10);
         bin.root.right.left.left.left.left.left = new Node(11);
         bin.root.right.left.left.left.left.left.left = new Node(12);
         bin.root.right.left.left.left.left.left.left.left = new Node(13);
@@ -47,6 +62,10 @@ public class MaxSum {
 
         int result = bin.maxSum(bin.root);
 
-        System.out.println("daimeter of binary tree =" + result);
+        int result2 = bin.maxLeafToLeaf(bin.root);
+
+        System.out.println("max sum from leaf to leaf node=" + result2);
+
+        System.out.println("max sum from any node to any node =" + result);
     }
 }
