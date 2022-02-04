@@ -2,7 +2,7 @@ package DynamicProgramming;
 
 import java.util.Arrays;
 import java.util.Scanner;
-
+// count of subsets(of numbers) from int array which will give you sum equal to given input sum.
 public class CountOfEqualSum {
 
     int size1;

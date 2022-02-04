@@ -2,7 +2,7 @@ package DynamicProgramming;
 
 import java.util.Arrays;
 import java.util.Scanner;
-
+// Is given array have subsets where partitions of array can give you equal sums for any 2 subsets.
 public class EqualSumPartition {
 
 
