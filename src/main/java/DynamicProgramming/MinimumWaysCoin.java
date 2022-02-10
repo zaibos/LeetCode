@@ -2,7 +2,7 @@ package DynamicProgramming;
 
 import java.util.Arrays;
 import java.util.Scanner;
-
+// Minimum number of ways to choose coins from int array to give you equal sum/target.
 public class MinimumWaysCoin {
     int size1;
     int target1;
