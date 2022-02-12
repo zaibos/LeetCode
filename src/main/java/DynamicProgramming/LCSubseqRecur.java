@@ -4,8 +4,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
-
-public class LongestCommonSubseqRecur {
+//Length of Longest common subsequence using recursion
+//ABC - STR1
+//ABSFC - STR2
+// answer=3 [ABC]
+public class LCSubseqRecur {
 
     public int solve(List<String> s1, List<String> s2, int l1, int l2){
 
@@ -35,7 +38,7 @@ public class LongestCommonSubseqRecur {
         List<String> strings2 = new ArrayList<String>(Arrays.asList(str2.split("")));
         System.out.println(strings2.toString());
 
-        LongestCommonSubseqRecur lngCmnSub = new LongestCommonSubseqRecur();
+        LCSubseqRecur lngCmnSub = new LCSubseqRecur();
         int res = lngCmnSub.solve(strings1,strings2,str1.length(),str2.length());
         System.out.println("answer="+res);
     }

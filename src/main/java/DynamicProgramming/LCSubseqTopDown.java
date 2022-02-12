@@ -4,14 +4,17 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
-
-public class LongestCommonSubseqTopDown {
+//Length of Longest common subsequence using top down
+//ABC - STR1
+//ABSFC - STR2
+// answer=3 [ABC]
+public class LCSubseqTopDown {
 
     int size1;
     int target1;
     int[][] res1;
 
-    LongestCommonSubseqTopDown(int arr_len,int target) {
+    LCSubseqTopDown(int arr_len, int target) {
         size1 = arr_len;
         target1 = target;
         res1 = new int[size1][target1];
@@ -53,7 +56,7 @@ public class LongestCommonSubseqTopDown {
         List<String> strings2 = new ArrayList<String>(Arrays.asList(str2.split("")));
         System.out.println(strings2.toString());
 
-        LongestCommonSubseqTopDown longestCommonSubseqTopDown = new LongestCommonSubseqTopDown(strings1.size()+1,strings2.size()+1 );
+        LCSubseqTopDown longestCommonSubseqTopDown = new LCSubseqTopDown(strings1.size()+1,strings2.size()+1 );
         int res = longestCommonSubseqTopDown.solve(strings1,strings2,str1.length(),str2.length());
         System.out.println("answer="+res);
         System.out.println("*****res1******");
