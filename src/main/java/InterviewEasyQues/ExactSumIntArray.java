@@ -1,6 +1,7 @@
 package InterviewEasyQues;
 
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -9,23 +10,26 @@ import java.util.Scanner;
 public class ExactSumIntArray {
 
     Map<Integer,Integer> map = new HashMap<>();
+    int[] arr = new int[2];
 
     public int[] exactSumInArr(int[] nums,int target){
 
 
-        for (int j=0; j<nums.length; j++){
-            map.put(nums[j],j);
+        map.put(nums[0],0);
 
-        }
-
-        for (int j=0; j<nums.length; j++){
-            if(map.containsKey(target - nums[j]) && j != map.get(target - nums[j])){
-                return new int[] {j,map.get(target - nums[j])};
+        for (int j=1; j<nums.length; j++){
+            int val = target - nums[j];
+            if(map.containsKey(val) ){
+                arr[0] = map.get(val);
+                arr[1] = j;
+                return arr;
+            }else{
+                map.put(arr[j],j);
             }
 
         }
 
-        return new int[2];
+        return arr;
     }
 
     public static void main(String[] args) {
@@ -44,6 +48,7 @@ public class ExactSumIntArray {
         int[] input= new int[n];
         for(int i=0; i<n; i++)
         {
+            System.out.println("add element");
             input[i]=sc.nextInt();
             if (input[i] < Math.pow(-10,9) || input[i] > Math.pow(10,9)){
                 //System.out.println("wrong input element");
@@ -51,14 +56,14 @@ public class ExactSumIntArray {
             }
         }
 
-        //System.out.println("Target value->");
+        System.out.println("Target value->");
         int target = sc.nextInt();
         if (target <= Math.pow(-10,9) || target >= Math.pow(10,9) ){
             //System.out.println("wrong input for target value");
             System.exit(1);
         }
 
-        obj.exactSumInArr(input,target);
-        //System.out.println("result int="+ Arrays.toString(res));
+        int[] res = obj.exactSumInArr(input,target);
+        System.out.println("result int="+ Arrays.toString(res));
     }
 }

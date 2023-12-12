@@ -41,7 +41,7 @@ public class SortArray {
         List<Integer> list = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("enter 5 number below =");
+            System.out.println("enter 5 number below =");
         for( int i=0; i< 5; i++){
 
             int in = scanner.nextInt();
