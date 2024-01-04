@@ -1,8 +1,22 @@
 package LinkList;
 
-class LLNode{
-    int data;
-    LLNode next;
+class LLNode {
+    public int data;
+    public LLNode next;
+    public LLNode(int data){this.data=data;}
+
+    public void setData(int data){
+        this.data=data;
+    }
+    public int getData(){
+        return data;
+    }
+    public void setNext(LLNode next){
+        this.next=next;
+    }
+    public LLNode getNext(){
+        return this.next;
+    }
 }
 public class CheckPalindrome {
 

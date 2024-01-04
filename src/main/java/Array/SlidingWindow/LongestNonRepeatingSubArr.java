@@ -14,7 +14,7 @@ public class LongestNonRepeatingSubArr {
         for(int end=0; end < arr.length; end++){
 
             while(map.contains(arr[end])){
-                map.remove(arr[start]);
+                map.remove(arr[start]); //remove from starting of set.
                 start++;
             }
             map.add(arr[end]);

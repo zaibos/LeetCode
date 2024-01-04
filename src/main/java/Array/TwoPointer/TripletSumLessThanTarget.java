@@ -1,7 +1,7 @@
 package Array.TwoPointer;
 
 public class TripletSumLessThanTarget {
-
+//Count of triplets whose sum is smaller than target.
     public static void main(String[] args) {
         int[] arr = {-2,0,1,3};
         int tar = 2;

@@ -30,8 +30,15 @@ public class TwoSum {
                     //return new int[]{i,index};
                     System.out.println(i+" , "+index);
                     return;
+                }else{
+                    System.out.println("-1,-1");
+                    break;
                 }
+            }else{
+                System.out.println("-1,-1");
+                break;
             }
+
 
         }
 

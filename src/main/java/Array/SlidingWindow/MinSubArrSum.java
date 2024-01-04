@@ -17,6 +17,6 @@ public class MinSubArrSum {
                 start++;
             }
         }
-        System.out.println("larget=> "+minWindow);
+        System.out.println("smallest window => "+minWindow);
     }
 }
